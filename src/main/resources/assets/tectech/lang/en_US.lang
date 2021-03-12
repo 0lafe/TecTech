@@ -64,6 +64,8 @@ item.tm.teslaCoilCapacitor.1.name=MV Tesla Capacitor
 item.tm.teslaCoilCapacitor.2.name=HV Tesla Capacitor
 item.tm.teslaCoilCapacitor.3.name=EV Tesla Capacitor
 item.tm.teslaCoilCapacitor.4.name=IV Tesla Capacitor
+item.tm.teslaCoilCapacitor.5.name=LuV Tesla Capacitor
+item.tm.teslaCoilCapacitor.6.name=ZPM Tesla Capacitor
 item.tm.teslaCoilCapacitor.desc.0=Stores
 item.tm.teslaCoilCapacitor.desc.1=EU in a tesla tower at
 item.tm.teslaCoilCapacitor.desc.2=Yeet this broken item into some spicy water!
@@ -84,6 +86,16 @@ item.tm.teslaCover.desc.4=Who the hell uses cables anyway?
 
 item.tm.teslaStaff.name=Tesla Staff
 item.tm.teslaStaff.desc=Power of the gods, at the whim of a mortal!
+
+item.tm.enderfluidlinkcover.name=Ender Fluid Link Cover
+item.tm.enderfluidlinkcover.desc.0=Ender-Fluid-Enables Machines!
+item.tm.enderfluidlinkcover.desc.1=Use on any side of a fluid tank to link it to the Ender
+item.tm.enderfluidlinkcover.desc.2=Ender Tanks so are laggy -Bot from the Chads of NH
+
+item.tm.powerpassupgradecover.name=Power Pass Upgrade Cover
+item.tm.powerpassupgradecover.desc.0=Add power pass functionality to TecTech Multiblocks
+item.tm.powerpassupgradecover.desc.1=Active transformer in a can??
+item.tm.powerpassupgradecover.desc.2=Chain them up like Christmas lights!
 
 #Death Messages
 death.attack.microwaving=%1$s was dehydrated by radiation.
@@ -518,6 +530,7 @@ gt.blockcasingsBA0.2.name=HV Superconductor Primary Tesla Windings
 gt.blockcasingsBA0.3.name=EV Superconductor Primary Tesla Windings
 gt.blockcasingsBA0.4.name=IV Superconductor Primary Tesla Windings
 gt.blockcasingsBA0.5.name=LuV Superconductor Primary Tesla Windings
+gt.blockcasingsBA0.9.name=ZPM Superconductor Primary Tesla Windings
 gt.blockcasingsBA0.0.desc.0=Handles up to
 gt.blockcasingsBA0.0.desc.1=What one man calls God, another calls the laws of physics.
 gt.blockcasingsBA0.6.name=Tesla Base Casing
@@ -535,7 +548,7 @@ gt.blockmachines.multimachine.em.transformer.name=Active Transformer
 gt.blockmachines.multimachine.em.transformer.hint=1 - Energy IO Hatches or High Power Casing
 gt.blockmachines.multimachine.em.transformer.desc.0=Power substation
 gt.blockmachines.multimachine.em.transformer.desc.1=All the transformation!
-gt.blockmachines.multimachine.em.transformer.desc.2=Only 0.78125% power loss, HAYO!
+gt.blockmachines.multimachine.em.transformer.desc.2=Only 0.004% power loss, HAYO!
 
 gt.blockmachines.multimachine.tm.microwave.name=Microwave Grinder
 gt.blockmachines.multimachine.tm.microwave.hint.0=1 - Classic Hatches or Clean Stainless Steel Casing
@@ -767,8 +780,8 @@ gt.blockmachines.debug.tt.data.name=Debug Data Hatch
 gt.blockmachines.debug.tt.data.desc.0=Quantum Data Output
 gt.blockmachines.debug.tt.data.desc.1=High speed fibre optics connector.
 gt.blockmachines.debug.tt.data.desc.2=Must be painted to work
-gt.blockmachines.debug.tt.maintenance.name=Debug Maintenance Hatch
-gt.blockmachines.debug.tt.maintenance.desc.0=For maintaining Multiblocks
+gt.blockmachines.debug.tt.maintenance.name=Auto-Taping Maintenance Hatch
+gt.blockmachines.debug.tt.maintenance.desc.0=For automatically maintaining Multiblocks
 gt.blockmachines.debug.tt.maintenance.desc.1=Does fix everything but itself.
 gt.blockmachines.debug.tt.maintenance.desc.2=Fixing is for plebs!
 gt.blockmachines.debug.tt.genny.name=Debug Power Generator

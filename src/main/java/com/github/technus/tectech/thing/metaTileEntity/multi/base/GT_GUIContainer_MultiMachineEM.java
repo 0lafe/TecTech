@@ -18,12 +18,12 @@ import static gregtech.api.enums.GT_Values.RES_PATH_GUI;
  */
 
 public class GT_GUIContainer_MultiMachineEM extends GT_GUIContainerMetaTile_Machine {
-    private String mName;
+    private final String mName;
     private static byte counter = 0;
-    private final boolean ePowerPassButton, eSafeVoidButton, allowedToWorkButton;
+    private final boolean eSafeVoidButton, allowedToWorkButton,ePowerPassButton;
     private final GT_Container_MultiMachineEM mContainer;
 
-    public GT_GUIContainer_MultiMachineEM(InventoryPlayer aInventoryPlayer, IGregTechTileEntity aTileEntity, String aName, String aTextureFile, boolean enablePowerPass, boolean enableSafeVoid, boolean enablePowerButton) {
+    public GT_GUIContainer_MultiMachineEM(InventoryPlayer aInventoryPlayer, IGregTechTileEntity aTileEntity, String aName, String aTextureFile,boolean enablePowerPass, boolean enableSafeVoid, boolean enablePowerButton) {
         super(new GT_Container_MultiMachineEM(aInventoryPlayer, aTileEntity), RES_PATH_GUI + "multimachines/" + (aTextureFile == null ? "MultiblockDisplay" : aTextureFile));
         mContainer=(GT_Container_MultiMachineEM)super.mContainer;
         mName = aName;
@@ -35,12 +35,7 @@ public class GT_GUIContainer_MultiMachineEM extends GT_GUIContainerMetaTile_Mach
     }
 
     public GT_GUIContainer_MultiMachineEM(InventoryPlayer aInventoryPlayer, IGregTechTileEntity aTileEntity, String aName, String aTextureFile) {
-        super(new GT_Container_MultiMachineEM(aInventoryPlayer, aTileEntity), RES_PATH_GUI + "multimachines/" + (aTextureFile == null ? "MultiblockDisplay" : aTextureFile));
-        mContainer=(GT_Container_MultiMachineEM)super.mContainer;
-        mName = aName;
-        ePowerPassButton=eSafeVoidButton=allowedToWorkButton=true;
-        ySize= 192;
-        xSize = 198;
+        this(aInventoryPlayer,aTileEntity,aName,aTextureFile,true,true,true);
     }
 
     @Override
@@ -108,10 +103,12 @@ public class GT_GUIContainer_MultiMachineEM extends GT_GUIContainerMetaTile_Mach
             counter = (byte) ((1 + counter) % 6);
             GL11.glColor4f(1f, 1f, 1f, 1f);
             x+= 173;
-            if(!ePowerPassButton) {
+            if (!ePowerPassButton && !mContainer.ePowerPassCover) {//no function
                 drawTexturedModalRect(x, y + 115, 231, 23, 18, 18);
-            } else if (mContainer.ePowerPass) {
-                drawTexturedModalRect(x, y + 115, 207, 23, 18, 18);
+            } else {
+                if (mContainer.ePowerPass) {//
+                    drawTexturedModalRect(x, y + 115, 207, 23, 18, 18);
+                }
             }
 
             if(!eSafeVoidButton) {
